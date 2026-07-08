@@ -1,4 +1,6 @@
 import heroImage from "../assets/kkshero.png";
+import CallIcon from '@mui/icons-material/Call';
+
 export default function Hero() {
   return (
     <section
@@ -33,7 +35,13 @@ export default function Hero() {
               >
                 Get a Free Quote
               </button>
-              <button className="btn-secondary">Call Us Now</button>
+              <button className="btn-secondary">
+                <a
+  href="tel:+919710710754"
+>
+  <CallIcon />
+  Call Us Now
+</a></button>
             </div>
           </div>
         </div>
