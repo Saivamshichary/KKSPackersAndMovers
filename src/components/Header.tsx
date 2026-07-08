@@ -1,5 +1,8 @@
 import { useState } from "react";
 import logo from "../assets/kkslogo.png";
+import CallIcon from '@mui/icons-material/Call';
+// import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -45,8 +48,13 @@ export default function Header() {
           {/* Contact & CTA */}
           <div className="hidden md:flex items-center space-x-4">
             <div className="text-right">
-              <p className="text-sm text-gray-600">Call Us</p>
-              <p className="font-bold text-orange-500">+91 98765 43210</p>
+              <a
+                href="tel:+919710710754"
+                className="text-orange-500 font-bold px-3 py-2"
+              >
+                <CallIcon />
+                +91 97107 10754
+              </a>
             </div>
             <button className="btn-primary" onClick={() => {
     document.getElementById("contact")?.scrollIntoView({
@@ -91,10 +99,11 @@ export default function Header() {
                 </a>
               ))}
               <a
-                href="tel:+919876543210"
+                href="tel:+919710710754"
                 className="text-orange-500 font-bold px-3 py-2"
               >
-                +91 98765 43210
+                <CallIcon />
+                +91 97107 10754
               </a>
               <button
                 className="btn-primary w-full"
