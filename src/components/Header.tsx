@@ -33,12 +33,12 @@ export default function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center">
             {navItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
-                className="text-gray-700 hover:text-orange-500 transition-colors font-medium"
+                className="text-gray-700 hover:text-orange-500 transition-colors font-medium m-4"
               >
                 {item.label}
               </a>
@@ -87,7 +87,7 @@ export default function Header() {
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="md:hidden pb-4">
-            <div className="flex flex-col space-y-2">
+            <div className="flex flex-col">
               {navItems.map((item) => (
                 <a
                   key={item.label}
