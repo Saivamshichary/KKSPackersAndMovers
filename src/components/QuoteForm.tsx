@@ -17,21 +17,6 @@ export default function QuoteForm() {
     message: "",
   });
 
-  const [submitted, setSubmitted] = useState(false);
-
-  const cities = [
-    "Select City",
-    "Hyderabad",
-    "Bangalore",
-    "Chennai",
-    "Delhi",
-    "Mumbai",
-    "Pune",
-    "Kolkata",
-    "Jaipur",
-    "Other",
-  ];
-
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
   ) => {
@@ -73,17 +58,6 @@ ${formData.message ? formData.message : "N/A"}
         </p>
 
         <div className="bg-gray-50 rounded-lg shadow-md p-8 md:p-12">
-          {submitted ? (
-            <div className="text-center py-8">
-              <div className="text-5xl mb-4">✅</div>
-              <p className="text-xl font-bold text-green-600 mb-2">
-                Thank You!
-              </p>
-              <p className="text-gray-600">
-                We'll contact you shortly with your moving estimate.
-              </p>
-            </div>
-          ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
@@ -167,7 +141,6 @@ ${formData.message ? formData.message : "N/A"}
                 Get a Quote
               </button>
             </form>
-          )}
         </div>
       </div>
     </section>
