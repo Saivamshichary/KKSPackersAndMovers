@@ -1,0 +1,116 @@
+import { useState } from "react";
+import logo from "../assets/kkslogo.png";
+
+export default function Header() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const navItems = [
+    { label: "Home", href: "#home" },
+    { label: "Services", href: "#services" },
+    { label: "About", href: "#about" },
+    { label: "Testimonials", href: "#testimonials" },
+    { label: "Contact", href: "#contact" },
+  ];
+
+  return (
+    <header className="bg-white shadow-sm sticky top-0 z-50">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20">
+          {/* Logo */}
+          <div className="text-[#0e2c5e] flex items-center space-x-1">
+            <img
+              src={logo}
+              alt="KKS Logo"
+              className="h-16 w-16 object-contain bg-transparent"
+            />
+            <span className="font-bold text-4xl">KKS</span>
+            <span className="text-l border-b-2 border-orange-500">
+              Packers & Movers
+            </span>
+          </div>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            {navItems.map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                className="text-gray-700 hover:text-orange-500 transition-colors font-medium"
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+
+          {/* Contact & CTA */}
+          <div className="hidden md:flex items-center space-x-4">
+            <div className="text-right">
+              <p className="text-sm text-gray-600">Call Us</p>
+              <p className="font-bold text-orange-500">+91 98765 43210</p>
+            </div>
+            <button className="btn-primary" onClick={() => {
+    document.getElementById("contact")?.scrollIntoView({
+      behavior: "smooth",
+    });
+  }}>Get a Quote</button>
+          </div>
+
+          {/* Mobile menu button */}
+          <button
+            className="md:hidden text-gray-700"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+
+        {/* Mobile Navigation */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden pb-4">
+            <div className="flex flex-col space-y-2">
+              {navItems.map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  className="text-gray-700 hover:text-orange-500 px-3 py-2 rounded-md"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {item.label}
+                </a>
+              ))}
+              <a
+                href="tel:+919876543210"
+                className="text-orange-500 font-bold px-3 py-2"
+              >
+                +91 98765 43210
+              </a>
+              <button
+                className="btn-primary w-full"
+                onClick={() => {
+                  document.getElementById("contact")?.scrollIntoView({
+                    behavior: "smooth",
+                  });
+                  setIsMobileMenuOpen(!isMobileMenuOpen);
+                }}
+              >
+                Get a Quote
+              </button>
+            </div>
+          </div>
+        )}
+      </nav>
+    </header>
+  );
+}
