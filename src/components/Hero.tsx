@@ -18,12 +18,15 @@ export default function Hero() {
           {/* Left Content */}
           <div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              YOUR RELIABLE
-              <span className="text-orange-500"> MOVING PARTNER</span>
+              Trusted Packers,  
+              <span className="text-orange-500"> Movers & Travels</span>
             </h1>
-            <p className="text-lg text-white-300 mb-8">
-              Safe, Fast & Affordable Relocation Services
-            </p>
+            <h2 className="text-lg text-white-300">
+              Across Tamil Nadu, Kerala, Karnataka, Andhra Pradesh, Telangana & Pan India.
+            </h2>
+            <h2 className="text-lg text-white-300 mb-8">
+                          House Shifting • Office Relocation • Car Transport • Bike Transport • Local & Interstate Moving
+            </h2>
             <div className="flex flex-col sm:flex-row gap-4">
               <button
                 className="btn-primary"

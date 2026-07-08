@@ -5,6 +5,7 @@ import WhyChooseUs from '../components/WhyChooseUs';
 import Testimonials from '../components/Testimonials';
 import QuoteForm from '../components/QuoteForm';
 import Footer from '../components/Footer';
+import Gallery from '../components/Gallery';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <Services />
       <WhyChooseUs />
+      <Gallery />
       <Testimonials />
       <QuoteForm />
       <Footer />
