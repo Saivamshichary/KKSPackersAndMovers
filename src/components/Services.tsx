@@ -15,15 +15,34 @@ export default function Services() {
     {
       id: 3,
       icon: '🚗',
-      title: 'Vehicle Transport',
+      title: 'Car & Bike Transportation',
       description: 'Safe and reliable transportation of your vehicles across the country.',
     },
     {
       id: 4,
       icon: '📦',
-      title: 'Storage Solutions',
-      description: 'Secure and climate-controlled storage facilities for your belongings.',
+      title: 'Interstate Moving',
+      description: 'Reliable and efficient interstate moving services for your peace of mind.',
     },
+     {
+      id: 5,
+      icon: '📦',
+      title: 'Loading & Unloading',
+      description: 'Reliable and efficient loading and unloading services for your peace of mind.',
+    },
+         {
+      id: 5,
+      icon: '📦',
+      title: 'Packing Services',
+      description: 'Reliable and efficient packing services to handle your precious items.',
+    },
+             {
+      id: 6,
+      icon: '📦',
+      title: 'Tour and Travel Services',
+      description: 'Reliable and efficient packing services to handle your precious items.',
+    },
+
   ];
 
   return (
