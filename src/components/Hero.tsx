@@ -1,16 +1,14 @@
 import heroImage from "../assets/kkshero.png";
+import heroImageMobile from "../assets/kkshero-mobile.png";
 import CallIcon from '@mui/icons-material/Call';
 
 export default function Hero() {
   return (
     <section
       id="home"
-      className="text-white py-20 md:py-32"
+      className="text-white py-20 md:py-32 bg-cover  bg-no-repeat bg-center"
       style={{
-        backgroundImage: `url(${heroImage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
+        backgroundImage: `url(${window.innerWidth > 768 ? heroImage : heroImageMobile})`,
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
