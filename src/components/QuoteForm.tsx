@@ -30,24 +30,41 @@ export default function QuoteForm() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const phone = "918096102712"; // Your WhatsApp number (country code, no +)
+    const phone = "919710710754"; // Your WhatsApp number (country code, no +)
 
-    const message = `
-📦 *New Moving Quote Request*
+const message = `
+━━━━━━━━━━━━━━━━
+🚚 *KKS Packers & Movers*
+*New Moving Quote Request*
+━━━━━━━━━━━━━━━━
 
-👤 Name: ${formData.name}
+👤 *Customer Details*
+━━━━━━━━━━━━━━━━
+Name: ${formData.name}
 📞 Phone: ${formData.phone}
-📍 Moving From: ${formData.movingFrom}
-📍 Moving To: ${formData.movingTo}
 
-📝 Additional Details:
-${formData.message ? formData.message : "N/A"} 
-`;
+📦 *Moving Details*
+━━━━━━━━━━━━━━━━
+📍 From: ${formData.movingFrom}
+📍 To: ${formData.movingTo}
 
-    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+📝 *Additional Requirements*
+━━━━━━━━━━━━━━━━
+${formData.message || "No additional details provided"}
+
+━━━━━━━━━━━━━━━━
+✅ Please share the quotation details.
+
+Thank you.
+*KKS Packers & Movers*
+`.trim();
+
+const url = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`;
 
     window.open(url, "_blank");
   };
+
+
 
   return (
     <section id="contact" className="py-16 md:py-24 bg-white">

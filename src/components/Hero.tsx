@@ -1,14 +1,23 @@
-import heroImage from "../assets/kkshero.png";
-import heroImageMobile from "../assets/kkshero-mobile.png";
+import heroImage from "../assets/hero3.png";
+import { useState, useEffect } from "react";
+import heroImageMobile from "../assets/heromobile2.jpeg";
 import CallIcon from '@mui/icons-material/Call';
 
 export default function Hero() {
+   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <section
       id="home"
-      className="text-white py-20 md:py-32 bg-cover  bg-no-repeat bg-center"
+      className="text-white py-20 md:py-32 bg-cover h-screen bg-no-repeat bg-center"
       style={{
-        backgroundImage: `url(${window.innerWidth > 768 ? heroImage : heroImageMobile})`,
+        backgroundImage: isMobile ? `url(${heroImageMobile})` : `url(${heroImage})`,
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
