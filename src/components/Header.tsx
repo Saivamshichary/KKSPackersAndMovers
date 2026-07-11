@@ -1,8 +1,7 @@
 import { useState } from "react";
 import logo from "../assets/favicon2.png";
-import CallIcon from '@mui/icons-material/Call';
+import CallIcon from "@mui/icons-material/Call";
 // import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -26,7 +25,9 @@ export default function Header() {
               alt="Ramajayam Logo"
               className="h-16 w-16 object-contain bg-transparent"
             />
-            <span className="font-bold text-4xl">Ramajayam</span>
+            <span className="font-bold text-2xl sm:text-3xl md:text-4xl">
+              Ramajayam
+            </span>
             <span className="text-l border-b-2 border-orange-500">
               Packers & Movers
             </span>
@@ -56,11 +57,16 @@ export default function Header() {
                 +91 97107 10754
               </a>
             </div>
-            <button className="btn-primary" onClick={() => {
-    document.getElementById("contact")?.scrollIntoView({
-      behavior: "smooth",
-    });
-  }}>Get a Quote</button>
+            <button
+              className="btn-primary"
+              onClick={() => {
+                document.getElementById("contact")?.scrollIntoView({
+                  behavior: "smooth",
+                });
+              }}
+            >
+              Get a Quote
+            </button>
           </div>
 
           {/* Mobile menu button */}
