@@ -1,6 +1,6 @@
-import heroImage from "../assets/hero3.png";
+import heroImage from "../assets/hero.png";
 import { useState, useEffect } from "react";
-import heroImageMobile from "../assets/heromobile2.jpeg";
+import heroImageMobile from "../assets/heromobile.jpeg";
 import CallIcon from '@mui/icons-material/Call';
 
 export default function Hero() {
