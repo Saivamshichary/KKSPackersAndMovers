@@ -10,9 +10,9 @@ export default function Header() {
   const navItems = [
     { label: "Home", href: "#home" },
     { label: "Services", href: "#services" },
-    { label: "About", href: "#about" },
+    { label: "About", href: "#aboutus" },
     { label: "Testimonials", href: "#testimonials" },
-    { label: "Contact", href: "#contact" },
+    { label: "Contact", href: "#contactus" },
   ];
 
   return (
@@ -23,10 +23,10 @@ export default function Header() {
           <div className="text-[#0e2c5e] flex items-center space-x-1">
             <img
               src={logo}
-              alt="KKS Logo"
+              alt="Ramajayam Logo"
               className="h-16 w-16 object-contain bg-transparent"
             />
-            <span className="font-bold text-4xl">KKS</span>
+            <span className="font-bold text-4xl">Ramajayam</span>
             <span className="text-l border-b-2 border-orange-500">
               Packers & Movers
             </span>

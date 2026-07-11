@@ -36,7 +36,7 @@ useEffect(() => {
           <div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
               Trusted Packers,  
-              <span className="text-orange-500"> Movers & Travels</span>
+              <span className="text-orange-500"> Movers & Travels in CHENNAI</span>
             </h1>
             <h2 className="text-lg text-white-300">
               Across Tamil Nadu, Kerala, Karnataka, Andhra Pradesh, Telangana & Pan India.

@@ -34,7 +34,7 @@ export default function QuoteForm() {
 
 const message = `
 ━━━━━━━━━━━━━━━━
-🚚 *KKS Packers & Movers*
+🚚 *Ramajayam Packers & Movers*
 *New Moving Quote Request*
 ━━━━━━━━━━━━━━━━
 
@@ -56,7 +56,7 @@ ${formData.message || "No additional details provided"}
 ✅ Please share the quotation details.
 
 Thank you.
-*KKS Packers & Movers*
+*Ramajayam Packers & Movers*
 `.trim();
 
 const url = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`;
