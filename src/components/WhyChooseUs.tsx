@@ -80,7 +80,7 @@ export default function WhyChooseUs() {
   return (
     <section id="about" className="py-16 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="section-title">Why Choose KKS Packers?</h2>
+        <h2 className="section-title">Why Choose Ramajayam Packers?</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {reasons.map((reason) => (

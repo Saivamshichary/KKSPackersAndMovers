@@ -1,4 +1,4 @@
-import logo from "../assets/kkslogo.png";
+import logo from "../assets/Ramajayamlogo.png";
 import CallIcon from "@mui/icons-material/Call";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
@@ -31,13 +31,13 @@ export default function Footer() {
             <div className="flex items-center space-x-2 mb-4">
               <img
                 src={logo}
-                alt="KKS Logo"
+                alt="Ramajayam Logo"
                 className="h-16 w-16 object-contain bg-transparent"
               />
-              <span className="font-bold text-lg">KKS Packers & Movers</span>
+              <span className="font-bold text-lg">Ramajayam Packers & Movers</span>
             </div>
             <p className="text-gray-400">
-              KKS Packers & Movers & KKS Travels has over 20 years of experience providing safe, reliable, and affordable relocation services across Tamil Nadu, Kerala, Karnataka, Andhra Pradesh, Telangana, and throughout India. We specialize in household shifting, office relocation, vehicle transportation, and travel services with professional packing and timely delivery.
+              Ramajayam Packers & Movers & Ramajayam Travels has over 20 years of experience providing safe, reliable, and affordable relocation services across Tamil Nadu, Kerala, Karnataka, Andhra Pradesh, Telangana, and throughout India. We specialize in household shifting, office relocation, vehicle transportation, and travel services with professional packing and timely delivery.
             </p>
           </div>
 
@@ -85,16 +85,16 @@ export default function Footer() {
           <div>
             <h4 className="font-bold text-lg mb-4">Services</h4>
             <ul className="space-y-2">
-              {services.map((service) => (
-                <li>
-                  <a
-                    href="#services"
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
-                    {service}
-                  </a>
-                </li>
-              ))}
+             {services.map((service) => (
+  <li key={service}>
+    <a
+      href="#services"
+      className="text-gray-400 hover:text-white transition-colors"
+    >
+      {service}
+    </a>
+  </li>
+))}
 
               
             </ul>
@@ -104,7 +104,7 @@ export default function Footer() {
             <h4 className="font-bold text-lg mb-4">Service Areas</h4>
             <ul className="space-y-2">
               {serviceAreas.map((area) => (
-                <li>
+                <li key={area}>
                   <a
                     className="text-gray-400 hover:text-white transition-colors"
                   >
@@ -139,7 +139,7 @@ export default function Footer() {
                 <h2>WhatsApp</h2>
                 <a
                   className="text-orange-500 font-semibold px-3 py-2"
-                  href="https://wa.me/918096102712"
+                  href="https://wa.me/919710710754"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -147,11 +147,12 @@ export default function Footer() {
                   Chat on WhatsApp
                 </a>
               </div>
-              {/* //add proper email */}
-              {/* <div>
+              <div>
                 <p className="text-gray-400 text-sm">Email</p>
-                <p className="text-white font-semibold">info@kkspackers.com</p>
-              </div> */}
+                <a href="mailto:kpsekar86@gmail.com" className="text-orange-500 hover:text-white">
+                  kpsekar86@gmail.com
+                </a>
+              </div>
               <div>
                 <p className="text-gray-400 text-sm">Branches</p>
                 <p className="text-white font-semibold">
@@ -176,7 +177,7 @@ export default function Footer() {
             </a>
           </div>
           <div className="text-gray-400 text-sm">
-            <p>© 2026 KKS Packers & Movers & KKS Travels. All Rights Reserved.</p>
+            <p>© 2026 Ramajayam Packers & Movers & Ramajayam Travels. All Rights Reserved.</p>
 
 <p>Professional Packers • Movers • Car & Bike Transportation • Travel Services</p>
           </div>
