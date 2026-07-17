@@ -1,5 +1,5 @@
 import { useState } from "react";
-import logo from "../assets/favicon.png";
+import logo from "../assets/logo.png";
 import CallIcon from "@mui/icons-material/Call";
 // import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
